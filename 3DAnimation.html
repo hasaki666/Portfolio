@@ -167,7 +167,12 @@ Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       $('#myModalBody').html(imgHtml)
       myModal.show()
     })
-    fetch('http://116.62.129.164:3000/api?url=3DAnimation').then(txt=>txt.json()).then(data=>{
+    const url = "https://1bf1-103-214-41-37.ngrok-free.app/api?url=3DAnimation";
+    const headers = {
+      "ngrok-skip-browser-warning": "any_value",
+    };
+
+    fetch(url, { headers: headers,}).then(txt=>txt.json()).then(data=>{
         if(data && data.length){
           let html = ``
           data.map(item=>{
