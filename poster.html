@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>金胖子作品集</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: PhotoFolio
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <i class="bi bi-camera"></i>
+        <h1>作品集</h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="detailsPage.html">详情页</a></li>
+          <li><a href="modeRendering.html">建模渲染</a></li>
+          <li><a href="poster.html" class="active">海报</a></li>
+          <li><a href="amazonMainImage.html" >亚马逊主图a+</a></li>
+          <li><a href="3DAnimation.html">三维动画</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-social-links" style="visibility: hidden;">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= End Page Header ======= -->
+    <!-- <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>海报</h2>
+            <p>海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报海报</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- End Page Header -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container-fluid">
+
+        <div class="row gy-4 justify-content-center homePhotoList">
+         
+
+        </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="details-modal-close" onclick="colseDalog()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z" fill="black"></path>
+              </svg>
+            </div>
+            <h4 class="modal-title" id="myModalLabel">
+              <!-- 模态框（Modal）标题 -->
+            </h4>
+          </div>
+          <div class="modal-body" id="myModalBody">
+            <!-- <img src="./assets/img/home/zuoping/changtu.jpg" alt=""> -->
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+            </button>
+            <button type="button" class="btn btn-primary">
+              提交更改
+            </button>
+          </div> -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal -->
+    </div>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <!-- <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>PhotoFolio</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div> -->
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader">
+    <div class="line"></div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+  <script defer>
+    var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+      keyboard: false
+    })
+    function colseDalog(){
+      myModal.hide()
+    }
+    $('.homePhotoList').on("click",".preview-link",function(){
+      let imageList = $(this).attr('imageList').split(',')
+      let imgHtml = ``
+      imageList.map(item=>{
+        imgHtml += `<img src='${item}' />`
+      })
+      $('#myModalBody').html(imgHtml)
+      myModal.show()
+    })
+    fetch('http://116.62.129.164:3000/api?url=poster').then(txt=>txt.json()).then(data=>{
+        if(data && data.length){
+          let html = ``
+          data.map(item=>{
+            html += `
+            <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="gallery-item h-100 preview-link" imageList="${item.detailFiles.join(',')}">
+              <img src="${item.previewFile}" class="img-fluid" alt="">
+              <div class="gallery-links d-flex align-items-center justify-content-center">
+                <div class="glightbox"><i class="bi bi-arrows-angle-expand"></i></div>
+              </div>
+            </div>
+          </div>`
+          })
+          $('.homePhotoList').append(html)
+        }
+    })
+  </script>
+</body>
+
+</html>
