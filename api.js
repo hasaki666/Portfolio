@@ -7,12 +7,22 @@ const fs = require('fs');
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
 
 const fileDisplay = (url) => {
     return new Promise((resolve, reject) => {
         fs.readdir(url, (err, files) => {
-            let newfiles = files.sort((a, b) => a.length - b.length)
-            resolve(newfiles);
+            if (files && files.length) {
+                let newfiles = files.sort((a, b) => a.length - b.length)
+                resolve(newfiles);
+            } else {
+                resolve([]);
+            }
         })
     })
 }
@@ -26,7 +36,7 @@ app.get('/api', (req, res) => {
             for (let index = 0; index < arr.length; index++) {
                 const element = arr[index];
                 let fileList = await fileDisplay(`${assetPath}/${req.query.url}/${element}`)
-                if(fileList && fileList.length){
+                if (fileList && fileList.length) {
                     let previewFile = `${assetPath}/${req.query.url}/${element}/${fileList.filter(fi => fi.includes('index')).join(',')}`
                     let detailFiles = fileList.map(ma => {
                         if (!ma.includes('index')) {
