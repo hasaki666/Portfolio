@@ -17,6 +17,7 @@ app.use((req, res, next) => {
 const fileDisplay = (url) => {
     return new Promise((resolve, reject) => {
         fs.readdir(url, (err, files) => {
+            console.log(files);
             if (files && files.length) {
                 let newfiles = files.sort((a, b) => a.length - b.length)
                 resolve(newfiles);
